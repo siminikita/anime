@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Oswald:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#050505;
+}
+
+
+.cube {
+     position: relative;
+     width: 300px;
+     height: 300px;
+     transform-style: preserve-3d;
+     animation: animate 4s linear infinite;
+
+}
+@keyframes animate {
+    0% {
+        transform: rotateX(-30deg) rotateY(360deg);
+
+    }
+    100%{
+        transform: rotateX(-30deg) rotateY(0);
+    }
+}
+
+.cube div {
+    position:absolute;
+    top: 0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515,#00ec00);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+.cube div span h2 {
+    position: absolute;
+    font-size: 10em;
+    color: white;
+    transform: translateZ(50px);
+}
+.cube div span h2:nth-child(1){
+   transform: translateZ(0) translateY(20px); 
+   color: rgba(0, 0, 0, 0.1);
+   filter: blur(2px);
+}
+.top {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: #222;
+    transform: rotateX(90deg) translateZ(150px);
+}
+.top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 300px;
+    height: 300px;
+    background: #0f0;
+    transform: translateZ(-380px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(0, 255, 0, 0.2),
+    0 0 200px rgba(0, 255, 0, 0.4),
+    0 0 300px rgba(0, 255, 0, 0.6),
+    0 0 400px rgba(0, 255, 0, 0.8),
+    0 0 500px rgba(0, 255, 0, 1)
+}
+
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+
+h1 {
+  animation:glow 10s ease-in-out infinite;
+  
+  
+
+/* For less laggy effect, uncomment this:
+  
+  animation:none;
+  -webkit-text-stroke:1px #fff; 
+  
+=========== */
+  
+}
+
+
+
+* { box-sizing:border-box; }
+
+body {
+  background:#0a0a0a;
+  overflow:hidden;
+  text-align:center;
+}
+
+figure {
+  animation:wobble 5s ease-in-out infinite;
+  transform-origin:center center;
+  transform-style:preserve-3d;
+}
+
+@keyframes wobble {
+  0%,100%{ transform:rotate3d(1,1,0,40deg); }
+  25%{ transform:rotate3d(-1,1,0,40deg); }
+  50%{ transform:rotate3d(-1,-1,0,40deg); }
+  75%{ transform:rotate3d(1,-1,0,40deg); }
+}
+
+h1 {
+  display:block;
+  width:100%;
+  padding:40px;
+  line-height:1.5;
+  font:900 8em 'Concert One', sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+}
+
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px red; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+
+h1:nth-child(2){ transform:translateZ(5px); }
+h1:nth-child(3){ transform:translateZ(10px);}
+h1:nth-child(4){ transform:translateZ(15px); }
+h1:nth-child(5){ transform:translateZ(20px); }
+h1:nth-child(6){ transform:translateZ(25px); }
+h1:nth-child(7){ transform:translateZ(30px); }
+h1:nth-child(8){ transform:translateZ(35px); }
+h1:nth-child(9){ transform:translateZ(40px); }
+h1:nth-child(10){ transform:translateZ(45px); }
+    </style>
+</head>
+
+
+    
+<body>
+    <h1>index1</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="cube">
+         <div class="top"></div>
+         <div>
+             <span style="--i:0">
+               <h2>HAVE</h2> 
+               <h2>HAVE</h2>
+             </span>
+             <span style="--i:1">
+                 <h2>A</h2> 
+               <h2>A</h2>
+             </span>
+             <span style="--i:2">
+                 <h2>GOOD</h2> 
+               <h2>GOOD</h2>
+             </span>
+             <span style="--i:3">
+                 <h2>DAY</h2> 
+               <h2>DAY</h2>
+             </span>
+         </div>
+     </div>
+
+     <figure>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>
+        <h1>3d CSS GLOW</h1>  
+      </figure>
+ </body>
